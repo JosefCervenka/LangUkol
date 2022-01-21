@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "bea8b326-1643-473c-b82b-070e596430fe": {
+      "ProjectGuid": "bea8b326-1643-473c-b82b-070e596430fe",
+      "DisplayName": "PaymentsSystem",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

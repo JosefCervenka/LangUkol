@@ -1,0 +1,83 @@
+﻿@page
+@model PaymentsSystem.Views.IndexModel
+@{
+	List<Payment> Payments = ViewBag.Payments;
+	List<Payment> PaymentsPrescriptions = ViewBag.PaymentsPrescriptions;
+}
+
+
+<script>
+	let type__ = '@ViewBag.Type';
+	if(type__ == "") type = "all";
+	console.log(type__);
+	let studentName__ = '@ViewBag.StudentName';
+	if(studentName__ == undefined) studentName__ = "";
+	console.log(studentName__);
+
+
+	function PathBuilder(type, studentName){
+		if (type == "") type = "all";
+		location.href = window.location.protocol+ '//' + window.location.host + '/payment/' + type +"/"+ studentName;
+	}
+
+</script>
+
+<div style="display:flex; justify-content:flex-start; height:600px;" id="__main__">
+	<div style="border: solid 1px black; height: 600px; display: flex; flex-direction:column">
+		<button onclick="PathBuilder('all', studentName__)">
+			Všechno
+		</button>
+		<button onclick="PathBuilder('tuition', studentName__)">
+			Školné
+		</button>
+		<button onclick="PathBuilder('Fond', studentName__)">
+			Fond
+		</button>
+		<button onclick="PathBuilder('accommodation', studentName__)">
+			Ubytování
+		</button>
+	</div>
+	<div style="flex:1; border: solid 1px black; display: flex; flex-direction: column">
+		<div style="display:flex">
+		<input id="search" type="text" style="flex:1" onchange="studentName__ = document.getElementById('search').value"/><button onclick="PathBuilder(type__, studentName__)">Hledej žáka</button></div>
+		<div style="display: flex;">
+			<div style="width:100%; display: flex; justify-content: flex-start; align-items:flex-start; flex-direction:column; width:50%;">
+				<span><b>Předpisy</b></span>
+
+				<div style="height:500px; width:100%; display:flex; flex-direction:column; overflow-y: scroll;">
+					@if(PaymentsPrescriptions != null)
+					@foreach(var PaymentPrescription in PaymentsPrescriptions){
+						<div style="border: solid 1px black">
+						
+						<form method="post" id="@PaymentPrescription.Id">
+								<input type="hidden" name="payAction" value="@PaymentPrescription.Id">
+								<input type="submit" value="Zaplať">
+						</form>
+
+
+						<span>@PaymentPrescription.Description</span>
+						<span>@PaymentPrescription.Amount</span>
+						<span>@PaymentPrescription.Date</span>
+						<span>@PaymentPrescription.User.Email</span>
+						</div>
+					}
+					</div>
+			</div>
+			<div style= "display: flex; justify-content: flex-start; align-items:flex-start; flex-direction:column; width:100%;">
+				<span><b>Platby</b></span>
+
+				<div style="height:500px; width:100%; display:flex; flex-direction:column; overflow-y: scroll;">
+					@if(PaymentsPrescriptions != null)
+					@foreach(var Payment in Payments){
+						<div style="border: solid 1px black">
+						<span>@Payment.Description</span>
+						<span>@Payment.Amount</span>
+						<span>@Payment.Date</span>
+						<span>@Payment.User.Email</span>
+						</div>
+						}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
