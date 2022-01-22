@@ -19,6 +19,9 @@
 		if (type == "") type = "all";
 		location.href = window.location.protocol+ '//' + window.location.host + '/payment/' + type +"/"+ studentName;
 	}
+	function Add(){
+		local.href = window.location.protocol+ '//' + window.location.host + '/paymentadd';
+	}
 
 </script>
 
@@ -36,6 +39,9 @@
 		<button onclick="PathBuilder('accommodation', studentName__)">
 			Ubytování
 		</button>
+		<a href="paymentadd">
+		Přidat
+		</a>
 	</div>
 	<div style="flex:1; border: solid 1px black; display: flex; flex-direction: column">
 		<div style="display:flex">
@@ -49,11 +55,12 @@
 					@foreach(var PaymentPrescription in PaymentsPrescriptions){
 						<div style="border: solid 1px black">
 						
+						<div style="display:flex">
 						<form method="post" id="@PaymentPrescription.Id">
 								<input type="hidden" name="payAction" value="@PaymentPrescription.Id">
 								<input type="submit" value="Zaplať">
 						</form>
-
+						</div>
 
 						<span>@PaymentPrescription.Description</span>
 						<span>@PaymentPrescription.Amount</span>
@@ -75,7 +82,7 @@
 						<span>@Payment.Date</span>
 						<span>@Payment.User.Email</span>
 						</div>
-						}
+					}
 				</div>
 			</div>
 		</div>

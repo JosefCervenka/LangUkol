@@ -1,33 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\pepak\\source\\repos\\PaymentsSystem\\PaymentsSystem\\PaymentsSystem.csproj": {}
+    "C:\\Users\\pepak\\LangUkol\\PaymentsSystem\\PaymentsSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\pepak\\source\\repos\\PaymentsSystem\\PaymentsSystem\\PaymentsSystem.csproj": {
+    "C:\\Users\\pepak\\LangUkol\\PaymentsSystem\\PaymentsSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\pepak\\source\\repos\\PaymentsSystem\\PaymentsSystem\\PaymentsSystem.csproj",
+        "projectUniqueName": "C:\\Users\\pepak\\LangUkol\\PaymentsSystem\\PaymentsSystem.csproj",
         "projectName": "PaymentsSystem",
-        "projectPath": "C:\\Users\\pepak\\source\\repos\\PaymentsSystem\\PaymentsSystem\\PaymentsSystem.csproj",
+        "projectPath": "C:\\Users\\pepak\\LangUkol\\PaymentsSystem\\PaymentsSystem.csproj",
         "packagesPath": "C:\\Users\\pepak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\pepak\\source\\repos\\PaymentsSystem\\PaymentsSystem\\obj\\",
+        "outputPath": "C:\\Users\\pepak\\LangUkol\\PaymentsSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\pepak\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -85,8 +84,20 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.10, 3.1.10]"
+            },
+            {
               "name": "Microsoft.NETCore.App.Host.win-x64",
               "version": "[3.1.20, 3.1.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
             }
           ],
           "frameworkReferences": {

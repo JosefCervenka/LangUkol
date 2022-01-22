@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BBBLlFK81AL3B2PV9+YhM45JyDYSifdl4nPadN+sr0r1rIn53f9j1VLPefZys19AY9vt9aBoPCRE+7SNKfsa8g==",
+  "dgSpecHash": "f1/pOoSVdZ1PF7dBB65piVZEgaesjA88r1w5huNFeBJwWKWzxLpvUtoPgaJW9Mj+JLeomy3uRnSQHZs5NaPXoA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\pepak\\source\\repos\\PaymentsSystem\\PaymentsSystem\\PaymentsSystem.csproj",
+  "projectFilePath": "C:\\Users\\pepak\\LangUkol\\PaymentsSystem\\PaymentsSystem.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pepak\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.10\\microsoft.aspnetcore.cryptography.internal.3.1.10.nupkg.sha512",
     "C:\\Users\\pepak\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.10\\microsoft.aspnetcore.cryptography.keyderivation.3.1.10.nupkg.sha512",
@@ -172,7 +172,10 @@
     "C:\\Users\\pepak\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\pepak\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\pepak\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\pepak\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.20\\microsoft.netcore.app.host.win-x64.3.1.20.nupkg.sha512"
+    "C:\\Users\\pepak\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.20\\microsoft.netcore.app.host.win-x64.3.1.20.nupkg.sha512",
+    "C:\\Users\\pepak\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\pepak\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\pepak\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
   ],
   "logs": []
 }

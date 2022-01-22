@@ -57,7 +57,6 @@ namespace PaymentsSystem.Controllers
         [HttpPost]
         public IActionResult Index(string payAction)
         {
-
             _dBContext.payments.Include(x => x.User).FirstOrDefault(x => x.Id == Guid.Parse(payAction)).IsPaid = true;
             _dBContext.SaveChanges();
             return RedirectToAction("all", "payment");
