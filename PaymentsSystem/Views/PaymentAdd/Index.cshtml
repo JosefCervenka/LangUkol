@@ -3,7 +3,7 @@
     List<string> types = ViewBag.Types;
 }
 @{
-    int Amount = 0;
+    float Amount = 0;
     string Description = "";
     string Type = types.FirstOrDefault();
     string User = users.FirstOrDefault();
@@ -39,6 +39,6 @@
 
 
     <span>Date</span>
-    <input form="form" type="date" />
+    <input form="form" type="date" asp-for="@Date"/>
     <input type="submit" value="Add" action="submit"/>
 </form>
