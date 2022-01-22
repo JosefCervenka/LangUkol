@@ -16,14 +16,9 @@ namespace PaymentsSystem.Controllers
             _dBContext = dBContext;
         }
         [HttpGet]
-
-
-
         [Route("payment/{Type?}/{StudentName?}")]
         public IActionResult Index(string Type, string StudentName)
         {
-
-
 
 
             ViewBag.Type = Type;
@@ -67,28 +62,5 @@ namespace PaymentsSystem.Controllers
             _dBContext.SaveChanges();
             return RedirectToAction("all", "payment");
         }
-
-        [Route("add/payment")]
-        public IActionResult Addpayment()
-        {
-            List<string> emails = new List<string>();
-
-            foreach (var item in _dBContext.Users)
-            {
-                emails.Add(item.Email);
-            }
-            ViewBag.Users = emails;
-            ViewBag.Types = new string[]{ "tuition", "fond", "accommodation" }.ToList();
-
-            return View();
-        }
-        [HttpPost]
-        [Route("add/payment")]
-        public IActionResult Addpayment(float Amount, string Description, string Type, string User, DateTime date)
-        {
-            Console.WriteLine("test");
-            return View();
-        }
-
     }
 }

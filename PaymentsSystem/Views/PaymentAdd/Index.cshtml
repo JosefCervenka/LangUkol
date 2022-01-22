@@ -1,0 +1,44 @@
+﻿@{
+    List<string> users = ViewBag.Users;
+    List<string> types = ViewBag.Types;
+}
+@{
+    int Amount = 0;
+    string Description = "";
+    string Type = types.FirstOrDefault();
+    string User = users.FirstOrDefault();
+    DateTime Date = DateTime.Now;
+}
+
+<form style="display:flex; flex-direction:column" id="form" method="post">
+    <span>Amount</span>
+    <input type="number" asp-for="@Amount" value="1" min="1"/>
+
+    <span> Description</span>
+    <input form="form" type="text" asp-for="@Description"/>
+
+    <span>Type</span>
+    <select form="form" name="Type" asp-for="@Type"/>
+   @foreach(var type in types)
+    {
+        <option value=@type>
+            @type
+        </option>
+    }
+    </select>
+
+    <span>User</span>
+    <select form="form" name="User" asp-for="@User"/>
+    @foreach(var user in users)
+    {
+        <option value=@user>
+            @user
+        </option>
+    }
+    </select>
+
+
+    <span>Date</span>
+    <input form="form" type="date" />
+    <input type="submit" value="Add" action="submit"/>
+</form>
