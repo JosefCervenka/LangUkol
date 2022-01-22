@@ -91,3 +91,4 @@ C:\Users\pepak\source\repos\PaymentsSystem\PaymentsSystem\obj\Debug\netcoreapp3.
 C:\Users\pepak\source\repos\PaymentsSystem\PaymentsSystem\obj\Debug\netcoreapp3.1\PaymentsSystem.pdb
 C:\Users\pepak\source\repos\PaymentsSystem\PaymentsSystem\obj\Debug\netcoreapp3.1\PaymentsSystem.genruntimeconfig.cache
 C:\Users\pepak\source\repos\PaymentsSystem\PaymentsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Payment\Index.cshtml.g.cs
+C:\Users\pepak\source\repos\PaymentsSystem\PaymentsSystem\obj\Debug\netcoreapp3.1\Razor\Views\Payment\addpayment.cshtml.g.cs

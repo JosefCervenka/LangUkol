@@ -4,6 +4,7 @@ using System;
 using System.Linq;
 using PaymentsSystem.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace PaymentsSystem.Controllers
 {
@@ -21,7 +22,7 @@ namespace PaymentsSystem.Controllers
         [Route("payment/{Type?}/{StudentName?}")]
         public IActionResult Index(string Type, string StudentName)
         {
-           
+
 
 
 
@@ -30,7 +31,7 @@ namespace PaymentsSystem.Controllers
 
             if (Type == null || Type == "" || Type == "all")
             {
-                if(StudentName == null || StudentName == "")
+                if (StudentName == null || StudentName == "")
                 {
                     ViewBag.payments = _dBContext.payments.Include(x => x.User).Where(x => x.IsPaid == true).ToList();
                     ViewBag.paymentsPrescriptions = _dBContext.payments.Include(x => x.User).Where(x => x.IsPaid == false).ToList();
@@ -45,7 +46,7 @@ namespace PaymentsSystem.Controllers
             {
                 if (StudentName == null || StudentName == "")
                 {
-                    ViewBag.payments = _dBContext.payments.Include(x => x.User).Where(x => x.IsPaid == true).Where(x=> x.Type == Type).ToList();
+                    ViewBag.payments = _dBContext.payments.Include(x => x.User).Where(x => x.IsPaid == true).Where(x => x.Type == Type).ToList();
                     ViewBag.paymentsPrescriptions = _dBContext.payments.Include(x => x.User).Where(x => x.IsPaid == false).Where(x => x.Type == Type).ToList();
                 }
                 else
@@ -67,6 +68,27 @@ namespace PaymentsSystem.Controllers
             return RedirectToAction("all", "payment");
         }
 
+        [Route("add/payment")]
+        public IActionResult Addpayment()
+        {
+            List<string> emails = new List<string>();
+
+            foreach (var item in _dBContext.Users)
+            {
+                emails.Add(item.Email);
+            }
+            ViewBag.Users = emails;
+            ViewBag.Types = new string[]{ "tuition", "fond", "accommodation" }.ToList();
+
+            return View();
+        }
+        [HttpPost]
+        [Route("add/payment")]
+        public IActionResult Addpayment(float Amount, string Description, string Type, string User, DateTime date)
+        {
+            Console.WriteLine("test");
+            return View();
+        }
 
     }
 }

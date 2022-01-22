@@ -1,0 +1,46 @@
+﻿@page
+@model PaymentsSystem.Views.Payment.Index1Model
+@{
+    List<string> users = ViewBag.Users;
+    List<string> types = ViewBag.Types;
+}
+
+@foreach(var item in users)
+{
+    @item
+
+}
+
+<form style="display:flex; flex-direction:column" id="form">
+    <span>Amount</span>
+    <input type="number" />
+
+    <span>Description</span>
+    <input type="text" />
+
+    <span>Type</span>
+    <select form="form" name="Type"/>
+    @foreach(var type in types)
+    {
+        <option value=@type>
+            @type
+        </option>
+    }
+    </select>
+
+    <span>User</span>
+    <select form="form" name="User"/>
+    @foreach(var user in users)
+    {
+        <option value=@user>
+            @user
+        </option>
+    }
+    </select>
+
+
+    <span>Date</span>
+    <input type="date" />
+
+    <input type="submit" />
+</form>
